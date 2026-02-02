@@ -14,11 +14,11 @@ const Home = () => {
               Hello I&apos;m <br/> <span className='text-accent'>Jung Hwang</span>
             </h1>
             <p className='max-w-[500px] mb-9 text-gray-700'>
-                I am an upcoming senior pursuing a Bachelor of Science in Data Science and Applied Statistics at Purdue University, with an anticipated graduation in May 2025.
+                I graduated with a Bachelor of Science in Data Science and Statistics from Purdue University in May 2025.
                 {/* <br/>I am anticipated to pursue a master's program in the fall of 2025. */}
             </p>
             <div className='flex flex-col xl:flex-row items-center gap-8'>
-              <Link href="/assets/jung resume.pdf" download>
+              <Link href="/assets/jh.pdf" download>
                 <Button variant="outline" size="lg" className="uppercase flex items-center gap-2">
                   <span>Download CV</span>
                   <FiDownload className='text-xl' />

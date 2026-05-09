@@ -14,7 +14,7 @@ const Home = () => {
               Hello I&apos;m <br/> <span className='text-accent'>Jung Hwang</span>
             </h1>
             <p className='max-w-[500px] mb-9 text-gray-700'>
-                I graduated with a Bachelor of Science in Data Science and Statistics from Purdue University in May 2025.
+                I graduated with a Bachelor of Science in Data Science and Statistics from Purdue University in May 2025. I am currently located in Plano, TX.
                 {/* <br/>I am anticipated to pursue a master's program in the fall of 2025. */}
             </p>
             <div className='flex flex-col xl:flex-row items-center gap-8'>

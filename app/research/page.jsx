@@ -26,6 +26,18 @@ const Research = () => {
       location: "Seoul, South Korea",
       image: "/assets/",
     },
+    {
+      // title: "Personal Project",
+      association: "Personal Project",
+      link: "/blog/",
+      link2: "",
+      description:
+        "Exploring theoretical ideas and practical experiments at the intersection of Data Science, Statistics, Computer Science, and Industrial Engineering",
+      timeline: "Feb 2026 - Ongoing",
+      location: "Dallas, TX",
+      image: "/assets/",
+
+    }
   ];
 
   return (

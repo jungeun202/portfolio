@@ -1,0 +1,190 @@
+---
+title: "Can Large Language Models Truly Reason Causally?"
+date: "2026-05-09"
+description: "Exploring the limitations of large language models in causal reasoning through experiments, theory, and industrial engineering applications."
+tags:
+  - LLM
+  - Causality
+  - Machine Learning
+  - Industrial Engineering
+  - AI Research
+---
+
+# Can Large Language Models Truly Reason Causally?
+
+Hello everyone,
+
+Welcome to my first blog post.
+
+Through this blog series, I want to explore ideas and experiments at the intersection of:
+
+- Data Science
+- Statistics
+- Machine Learning
+- Industrial Engineering
+- Artificial Intelligence
+
+As someone transitioning from a data science background into industrial engineering, I’ve become increasingly interested in how machine learning systems interact with real-world decision-making under uncertainty.
+
+Industrial engineering is often viewed as an applied engineering discipline, but at its core, it relies heavily on statistical modeling, optimization, system analysis, and decision theory. These same foundations also appear in modern AI research, especially in topics involving reasoning and causality.
+
+For this first post, I want to discuss a question that has recently gained a lot of attention:
+
+> Do large language models actually understand causality, or are they simply learning statistical patterns?
+
+---
+
+# Why Causality Matters
+
+Today, it’s common to hear phrases like:
+
+> “Let me ask ChatGPT.”
+
+Large language models (LLMs) such as ChatGPT, Gemini, Claude, and LLaMA can generate remarkably useful responses by training on massive amounts of internet-scale text data.
+
+However, despite their impressive capabilities, these models still face major limitations when reasoning about cause-and-effect relationships.
+
+This distinction is important because:
+
+- Correlation does not imply causation
+- Statistical association is not the same as understanding mechanisms
+- Real-world systems often require causal reasoning rather than pattern matching
+
+---
+
+# The Causal Hierarchy
+
+One of the most influential frameworks for understanding causality comes from Judea Pearl’s work on causal inference.
+
+Pearl describes causal reasoning as a hierarchy with three levels:
+
+## 1. Association
+
+The model recognizes patterns and correlations in data.
+
+Example:
+
+- Ice cream sales increase when drowning incidents increase.
+
+An LLM is generally very strong at this level because training data is fundamentally statistical.
+
+---
+
+## 2. Intervention
+
+The model reasons about what happens when we actively change something.
+
+Example:
+
+- What happens to production quality if we change a manufacturing process?
+
+This requires understanding the effect of actions rather than simply observing correlations.
+
+---
+
+## 3. Counterfactual Reasoning
+
+The highest level of causal reasoning.
+
+Example:
+
+- Would the accident still have happened if the machine had been maintained properly?
+
+This involves reasoning about alternative realities and hypothetical outcomes.
+
+---
+
+# Where LLMs Perform Well — and Where They Struggle
+
+Recent research suggests that modern LLMs perform very well on association-based tasks but struggle significantly when deeper causal reasoning is required.
+
+Some important studies include:
+
+- *Language Models as Causal Reasoners* (Kıcıman et al., 2023)
+- *Causal Reasoning in Large Language Models* (Jin et al., 2024)
+
+The common finding across many experiments is:
+
+- LLMs are excellent at recognizing patterns
+- Performance drops on intervention tasks
+- Performance drops even further on counterfactual reasoning
+
+One possible reason is how these systems are trained.
+
+Most modern LLMs use next-token prediction objectives, meaning they learn to predict the next word in a sequence. While this allows them to capture extremely rich statistical relationships, it does not necessarily force them to learn underlying causal mechanisms.
+
+This idea is also discussed in research on causal representation learning by Yoshua Bengio and others.
+
+---
+
+# My Initial Experiment
+
+To explore this idea myself, I ran some preliminary experiments using a LLaMA-based model on a local machine with:
+
+- RTX 4070 Super GPU
+- Ryzen 7800X3D CPU
+
+The goal was simple:
+
+> Test whether the model could move beyond association-based reasoning.
+
+## Initial Observation
+
+Without structured prompting:
+
+- The model performed well on correlation-style questions
+- The model struggled more on intervention and counterfactual reasoning tasks
+
+This behavior aligns closely with findings reported in benchmark studies such as:
+
+- BIG-bench
+- Causal QA datasets
+- Recent LLM reasoning evaluations
+
+---
+
+# Next Step: Structured Prompting
+
+My next step is to investigate whether prompting strategies can improve causal reasoning performance.
+
+In particular, I plan to experiment with:
+
+- Chain-of-Thought prompting
+- Structured reasoning prompts
+- Step-by-step decomposition
+- Causal graph-based prompting
+
+One especially interesting paper is:
+
+- *Chain-of-Thought Prompting Elicits Reasoning in Large Language Models* (Wei et al., 2022)
+
+The central question becomes:
+
+> Can better reasoning structure compensate for weak causal understanding?
+
+---
+
+# Why This Matters for Industrial Engineering
+
+This issue is not just theoretical.
+
+Causal reasoning is deeply connected to many industrial engineering problems, including:
+
+- Quality control
+- Process optimization
+- Supply chain management
+- Reliability engineeringa
+- Manufacturing systems
+- Decision-making under uncertainty
+
+In these environments, relying only on statistical associations can lead to dangerous conclusions.
+
+For example:
+
+A model may learn that variable `X` is strongly associated with outcome `Y`.
+
+However, if a hidden confounding variable `Z` is actually driving both:
+
+```text
+Z → X
+Z → Y
